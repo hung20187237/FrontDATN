@@ -51,7 +51,7 @@ export default function Rightbar({user, username}) {
     useEffect(() => {
         const getFollowings = async () => {
             try {
-                const followingList = await axios.get("http://localhost:8800/api/user/followings/" + user?._id);
+                const followingList = await axios.get("https://aplus-review-food.onrender.com/api/user/followings/" + user?._id);
                 setFollowings(followingList.data);
             } catch (err) {
                 console.log(err);
@@ -66,8 +66,8 @@ export default function Rightbar({user, username}) {
     useEffect(() => {
         const fetchPosts = async () => {
             const res = username
-                ? await axios.get("http://localhost:8800/api/post/profile/" + username)
-                : await axios.get("http://localhost:8800/api/top-posts");
+                ? await axios.get("https://aplus-review-food.onrender.com/api/post/profile/" + username)
+                : await axios.get("https://aplus-review-food.onrender.com/api/top-posts");
             setPosts(res.data);
         };
         fetchPosts();
@@ -82,7 +82,7 @@ export default function Rightbar({user, username}) {
     useEffect(() => {
         const getFriends = async () => {
             try {
-                const postList = await axios.get("http://localhost:8800/api/user/savepost/" + user?._id);
+                const postList = await axios.get("https://aplus-review-food.onrender.com/api/user/savepost/" + user?._id);
                 setSavePosts(postList.data);
             } catch (err) {
                 console.log(err);
@@ -98,7 +98,7 @@ export default function Rightbar({user, username}) {
     useEffect(() => {
         const getFriendRequest = async () => {
             try {
-                const friendRequest = await axios.get("http://localhost:8800/api/friendRequest/" + currentUser._id + "/" + user?._id);
+                const friendRequest = await axios.get("https://aplus-review-food.onrender.com/api/friendRequest/" + currentUser._id + "/" + user?._id);
                 if (friendRequest.data) {
                     setAddFriend(true)
                 }
@@ -124,12 +124,12 @@ export default function Rightbar({user, username}) {
     const handleClickFollowOrUnfollow = async () => {
         try {
             if (followed) {
-                await axios.put(`http://localhost:8800/api/user/${user._id}/unfollow`, {
+                await axios.put(`https://aplus-review-food.onrender.com/api/user/${user._id}/unfollow`, {
                     userId: currentUser._id,
                 });
                 dispatch({type: "UNFOLLOW", payload: user._id});
             } else {
-                await axios.put(`http://localhost:8800/api/user/${user._id}/follow`, {
+                await axios.put(`https://aplus-review-food.onrender.com/api/user/${user._id}/follow`, {
                     userId: currentUser._id,
                 });
                 dispatch({type: "FOLLOW", payload: user._id});
@@ -142,14 +142,14 @@ export default function Rightbar({user, username}) {
     const handleClickAddFriend = async () => {
         try {
             if (addFriend) {
-                await axios.delete(`http://localhost:8800/api/friendRequest/`, {
+                await axios.delete(`https://aplus-review-food.onrender.com/api/friendRequest/`, {
                     data: {
                         sendUserId: currentUser._id,
                         receiveUserId: user._id
                     }
                 });
             } else {
-                await axios.post(`http://localhost:8800/api/friendRequest/`, {
+                await axios.post(`https://aplus-review-food.onrender.com/api/friendRequest/`, {
                     sendUserId: currentUser._id,
                     receiveUserId: user._id
                 });
@@ -162,8 +162,8 @@ export default function Rightbar({user, username}) {
     const handleClickUnFriend = async () => {
         try {
 
-            await axios.put(`http://localhost:8800/api/user/` + user._id + '/unfriend', {userId: currentUser._id,});
-            await axios.delete(`http://localhost:8800/api/conversation/` + currentUser._id + '/' + user._id);
+            await axios.put(`https://aplus-review-food.onrender.com/api/user/` + user._id + '/unfriend', {userId: currentUser._id,});
+            await axios.delete(`https://aplus-review-food.onrender.com/api/conversation/` + currentUser._id + '/' + user._id);
             dispatch({type: "UNFRIEND", payload: user._id});
             setIsFriend(!isFriend)
         } catch (err) {
@@ -205,7 +205,7 @@ export default function Rightbar({user, username}) {
                 data.append("name", fileName);
                 data.append("file", avatar);
                 try {
-                    await axios.post("http://localhost:8800/api/upload", data);
+                    await axios.post("https://aplus-review-food.onrender.com/api/upload", data);
                 } catch (err) {
                 }
             }
@@ -216,11 +216,11 @@ export default function Rightbar({user, username}) {
                 data.append("name", fileName);
                 data.append("file", background);
                 try {
-                    await axios.post("http://localhost:8800/api/upload", data);
+                    await axios.post("https://aplus-review-food.onrender.com/api/upload", data);
                 } catch (err) {
                 }
             }
-            const res = await axios.put("http://localhost:8800/api/user/" + currentUser._id, updateUser);
+            const res = await axios.put("https://aplus-review-food.onrender.com/api/user/" + currentUser._id, updateUser);
             dispatch({type: 'UPDATE_PROFILE', payload: res.data});
             window.location.reload();
         } catch (err) {
@@ -234,7 +234,7 @@ export default function Rightbar({user, username}) {
             newPassword: value.newPassword,
         };
         try{
-            const res = await axios.post("http://localhost:8800/api/auth/change-password", changePassword);
+            const res = await axios.post("https://aplus-review-food.onrender.com/api/auth/change-password", changePassword);
             setMessageUpdate(res.data.message)
         }
         catch(err){

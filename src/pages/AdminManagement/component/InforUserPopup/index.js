@@ -67,11 +67,11 @@ const InfoUserModal = ({title, visible, onCancel, userId}) => {
 
     useEffect(() => {
         const fetchUsers = async () => {
-            const res = await axios.get("http://localhost:8800/api/user/adminRole/" + userId);
+            const res = await axios.get("https://aplus-review-food.onrender.com/api/user/adminRole/" + userId);
             setUser(res.data);
         };
         const fetchPosts = async () => {
-            const res = await axios.get("http://localhost:8800/api/post/byUserId/" + userId);
+            const res = await axios.get("https://aplus-review-food.onrender.com/api/post/byUserId/" + userId);
             setListPosts(res.data);
         };
         if (userId) {

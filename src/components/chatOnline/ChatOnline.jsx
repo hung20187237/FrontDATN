@@ -9,7 +9,7 @@ export default function ChatOnline({ onlineUsers, currentId, setCurrentChat }) {
 
   useEffect(() => {
     const getFriends = async () => {
-      const res = await axios.get("http://localhost:8800/api/user/friends/" + currentId);
+      const res = await axios.get("https://aplus-review-food.onrender.com/api/user/friends/" + currentId);
       setFriends(res.data);
     };
 
@@ -23,7 +23,7 @@ export default function ChatOnline({ onlineUsers, currentId, setCurrentChat }) {
   const handleClick = async (user) => {
     try {
       const res = await axios.get(
-        `http://localhost:8800/api/conversation/find/${currentId}/${user._id}`
+        `https://aplus-review-food.onrender.com/api/conversation/find/${currentId}/${user._id}`
       );
       setCurrentChat(res.data);
     } catch (err) {

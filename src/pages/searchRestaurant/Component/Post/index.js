@@ -25,7 +25,7 @@ const PostRes = ({post}) => {
     useEffect(() => {
         const fetchUser = async () => {
             const res = await axios.get(
-                `http://localhost:8800/api/user?userId=${post.userId}`
+                `https://aplus-review-food.onrender.com/api/user?userId=${post.userId}`
             );
             setUser(res.data);
         };

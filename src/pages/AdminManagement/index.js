@@ -325,22 +325,22 @@ export default function AdminManagement() {
     ];
 
     const fetchUsers = async () => {
-        const res = await axios.get("http://localhost:8800/api/user/all/all/all/");
+        const res = await axios.get("https://aplus-review-food.onrender.com/api/user/all/all/all/");
         setListUsers(res.data);
     };
 
     const fetchPosts = async () => {
-        const res = await axios.get("http://localhost:8800/api/post/allPosts/" + user._id);
+        const res = await axios.get("https://aplus-review-food.onrender.com/api/post/allPosts/" + user._id);
         setListPosts(res.data.sort((p1, p2) => {
             return new Date(p2.createdAt) - new Date(p1.createdAt);
         }));
     };
     const fetchComments = async () => {
-        const res = await axios.get("http://localhost:8800/api/comment/all/all/");
+        const res = await axios.get("https://aplus-review-food.onrender.com/api/comment/all/all/");
         setListComments(res.data);
     };
     const fetchReports = async () => {
-        const res = await axios.get("http://localhost:8800/api/report/all/");
+        const res = await axios.get("https://aplus-review-food.onrender.com/api/report/all/");
         setListReports(res.data);
     };
 
@@ -354,7 +354,7 @@ export default function AdminManagement() {
 
     const handleReportDelete = async (id) => {
         try {
-            await axios.delete("http://localhost:8800/api/report/" + id);
+            await axios.delete("https://aplus-review-food.onrender.com/api/report/" + id);
         } catch (err) {
             console.log(err);
         }
@@ -362,7 +362,7 @@ export default function AdminManagement() {
 
     const handlePostDelete = async (id) => {
         try {
-            await axios.delete("http://localhost:8800/api/post/deleteAdmin/" + id);
+            await axios.delete("https://aplus-review-food.onrender.com/api/post/deleteAdmin/" + id);
         } catch (err) {
             console.log(err);
         }
@@ -370,7 +370,7 @@ export default function AdminManagement() {
 
     const handleCommentDelete = async (id) => {
         try {
-            await axios.delete("http://localhost:8800/api/comment/adminRole/" + id);
+            await axios.delete("https://aplus-review-food.onrender.com/api/comment/adminRole/" + id);
         } catch (err) {
             console.log(err);
         }
@@ -378,7 +378,7 @@ export default function AdminManagement() {
 
     const handleChangeStatus = async (id, status) => {
         try {
-            await axios.put("http://localhost:8800/api/user/status/" + id,
+            await axios.put("https://aplus-review-food.onrender.com/api/user/status/" + id,
                 {
                     status: status,
                 }
@@ -390,7 +390,7 @@ export default function AdminManagement() {
 
     const handleChangeRole = async (id, role) => {
         try {
-            await axios.put("http://localhost:8800/api/user/role/" + id,
+            await axios.put("https://aplus-review-food.onrender.com/api/user/role/" + id,
                 {
                     role: role,
                 }

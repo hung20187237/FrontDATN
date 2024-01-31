@@ -17,7 +17,7 @@ const InfoCommentModal = ({title, visible, onCancel, onsubmit, commentId}) => {
 
     useEffect(() => {
         const fetchComments = async () => {
-            const res = await axios.get("http://localhost:8800/api/comment/" + commentId);
+            const res = await axios.get("https://aplus-review-food.onrender.com/api/comment/" + commentId);
             setComments(res.data);
         };
         if (commentId) {
@@ -27,7 +27,7 @@ const InfoCommentModal = ({title, visible, onCancel, onsubmit, commentId}) => {
 
     const handleCommentDelete = async () => {
         try {
-            await axios.delete("http://localhost:8800/api/comment/adminRole/" + commentId);
+            await axios.delete("https://aplus-review-food.onrender.com/api/comment/adminRole/" + commentId);
         } catch (err) {
             console.log(err);
         }
@@ -35,7 +35,7 @@ const InfoCommentModal = ({title, visible, onCancel, onsubmit, commentId}) => {
 
     const handleReportDelete = async () => {
         try {
-            await axios.delete("http://localhost:8800/api/report/byCommentId/" + commentId);
+            await axios.delete("https://aplus-review-food.onrender.com/api/report/byCommentId/" + commentId);
         } catch (err) {
             console.log(err);
         }

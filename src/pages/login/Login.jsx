@@ -33,7 +33,7 @@ export default function Login() {
         e.preventDefault();
     
         try{
-            const res = await axios.post("http://localhost:8800/api/auth/login",{ email: email.current.value, password: password.current.value });
+            const res = await axios.post("https://aplus-review-food.onrender.com/api/auth/login",{ email: email.current.value, password: password.current.value });
             dispatch({type: 'LOG_IN',payload: res.data});
             navigate('/')
         } 

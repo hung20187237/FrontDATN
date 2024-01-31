@@ -40,7 +40,7 @@ export default function SearchPost({username, socket}) {
     useEffect(() => {
         const fetchPosts = async () => {
             const res = await axios.get(
-                "http://localhost:8800/api/restaurant/" + resId
+                "https://aplus-review-food.onrender.com/api/restaurant/" + resId
             );
             setRestaurant(res.data);
         }
@@ -50,7 +50,7 @@ export default function SearchPost({username, socket}) {
     useEffect(() => {
         const fetchPosts = async () => {
             const postRes = await axios.get(
-                "http://localhost:8800/api/restaurant/reviewposts/" + resId
+                "https://aplus-review-food.onrender.com/api/restaurant/reviewposts/" + resId
             );
             setPost(postRes.data);
         };
@@ -80,7 +80,7 @@ export default function SearchPost({username, socket}) {
             console.log('data', data)
             try {
                 await axios
-                    .post("http://localhost:8800/api/mutiupload", data)
+                    .post("https://aplus-review-food.onrender.com/api/mutiupload", data)
                     .then((res) => res.data)
                     .then((data) =>
                         data.file.map((file) => {
@@ -92,7 +92,7 @@ export default function SearchPost({username, socket}) {
             }
         }
         try {
-            await axios.post("http://localhost:8800/api/post", newPost);
+            await axios.post("https://aplus-review-food.onrender.com/api/post", newPost);
             setIsModalOpen(false);
         } catch (err) {
         }

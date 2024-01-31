@@ -61,7 +61,7 @@ export default function Post({ post, user1, socket }) {
   useEffect(() => {
     const fetchUser = async () => {
       const res = await axios.get(
-        `http://localhost:8800/api/user?userId=${post.userId}`
+        `https://aplus-review-food.onrender.com/api/user?userId=${post.userId}`
       );
       setUser(res.data);
     };
@@ -72,7 +72,7 @@ export default function Post({ post, user1, socket }) {
   useEffect(() => {
     const fetchIdPost = async () => {
       const res = await axios.get(
-          "http://localhost:8800/api/restaurant/getId/" + post.title.trim()
+          "https://aplus-review-food.onrender.com/api/restaurant/getId/" + post.title.trim()
       );
       setRestaurantId(res.data)
     }
@@ -85,7 +85,7 @@ export default function Post({ post, user1, socket }) {
   useEffect(() => {
     const fetchComments = async () => {
       const res = await axios.get(
-        "http://localhost:8800/api/comment/onPost/" + post._id
+        "https://aplus-review-food.onrender.com/api/comment/onPost/" + post._id
       );
       const commentsSort = res.data.comments.sort((p1, p2) => {
         return new Date(p2.createdAt) - new Date(p1.createdAt);
@@ -100,7 +100,7 @@ export default function Post({ post, user1, socket }) {
   //xu ly xoa bai dang
   const handlePostDelete = async () => {
     try {
-      await axios.delete("http://localhost:8800/api/post/" + post._id, {
+      await axios.delete("https://aplus-review-food.onrender.com/api/post/" + post._id, {
         data: { userId: currentUser._id },
       });
       setCurrentPost(null);
@@ -112,7 +112,7 @@ export default function Post({ post, user1, socket }) {
   //xu ly khi like bai dang
   const handleClickLike = () => {
     try {
-      axios.put("http://localhost:8800/api/post/" + post._id + "/like", {
+      axios.put("https://aplus-review-food.onrender.com/api/post/" + post._id + "/like", {
         userId: currentUser._id,
       });
     } catch (err) {}
@@ -124,11 +124,11 @@ export default function Post({ post, user1, socket }) {
   //xu ly khi Save bai dang
   const handleClickSave = () => {
     try {
-      axios.put("http://localhost:8800/api/post/" + post._id + "/save", {
+      axios.put("https://aplus-review-food.onrender.com/api/post/" + post._id + "/save", {
         userId: currentUser._id,
       });
     } catch (err) {}
-    axios.put("http://localhost:8800/api/user/" + user1._id + "/save", {
+    axios.put("https://aplus-review-food.onrender.com/api/user/" + user1._id + "/save", {
       postId: post._id,
     });
     setSaved(isSaved ? saved - 1 : saved + 1);
@@ -139,7 +139,7 @@ export default function Post({ post, user1, socket }) {
   const handleClickReply = async (commentId) => {
     try {
       const respo = await axios.put(
-        "http://localhost:8800/api/comment/" + commentId._id + "/reply",
+        "https://aplus-review-food.onrender.com/api/comment/" + commentId._id + "/reply",
         {
           reply: {
             descreply: reply.current.value,
@@ -166,7 +166,7 @@ export default function Post({ post, user1, socket }) {
         post: post.desc,
         type: 1,
       };
-      axios.post("http://localhost:8800/api/notification", notify);
+      axios.post("https://aplus-review-food.onrender.com/api/notification", notify);
     } catch (err) {}
     dispatch({ type: "NOTIFICATION", payload: !notifyFlag });
 
@@ -188,7 +188,7 @@ export default function Post({ post, user1, socket }) {
         desc: comment.current.value,
       };
       const res = await axios.post(
-        "http://localhost:8800/api/comment",
+        "https://aplus-review-food.onrender.com/api/comment",
         newComment
       );
       setComments([res.data, ...comments]);
@@ -209,7 +209,7 @@ export default function Post({ post, user1, socket }) {
         post: comment,
         type: 2,
       };
-      axios.post("http://localhost:8800/api/notification", notify);
+      axios.post("https://aplus-review-food.onrender.com/api/notification", notify);
       socket.current?.emit("sendNotification", {
         sendUserName: currentUser.username,
         sendUserId: currentUser._id,
@@ -231,7 +231,7 @@ export default function Post({ post, user1, socket }) {
         post: reply,
         type: 5,
       };
-      axios.post("http://localhost:8800/api/notification", notify);
+      axios.post("https://aplus-review-food.onrender.com/api/notification", notify);
     } catch (err) {}
     dispatch({ type: "NOTIFICATION", payload: !notifyFlag });
   };
@@ -240,7 +240,7 @@ export default function Post({ post, user1, socket }) {
   const handleCommmentDelete = async (deleteComment) => {
     try {
       await axios.delete(
-        "http://localhost:8800/api/comment/" + deleteComment._id,
+        "https://aplus-review-food.onrender.com/api/comment/" + deleteComment._id,
         { data: { userId: currentUser._id } }
       );
       setComments(
@@ -317,7 +317,7 @@ export default function Post({ post, user1, socket }) {
   const handleReportPost = async (dataReport) => {
     try {
       const res = await axios.post(
-          "http://localhost:8800/api/report/", dataReport
+          "https://aplus-review-food.onrender.com/api/report/", dataReport
       );
       console.log('res', res)
     } catch (err) {}

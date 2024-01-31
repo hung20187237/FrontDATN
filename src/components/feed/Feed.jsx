@@ -24,7 +24,7 @@ export default function Feed({ username }) {
 
     useEffect(() => {
         const fetchPosts = async () => {
-            const res = await axios.get("http://localhost:8800/api/post/suggest-posts/" + user._id);
+            const res = await axios.get("https://aplus-review-food.onrender.com/api/post/suggest-posts/" + user._id);
             setPosts(res.data);
         };
         fetchPosts();

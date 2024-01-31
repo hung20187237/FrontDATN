@@ -49,11 +49,11 @@ const InfoPostModal = ({title, visible, onCancel, onsubmit, postId}) => {
 
     useEffect(() => {
         const fetchPosts = async () => {
-            const res = await axios.get("http://localhost:8800/api/post/" + postId);
+            const res = await axios.get("https://aplus-review-food.onrender.com/api/post/" + postId);
             setPosts(res.data);
         };
         const fetchComments = async () => {
-            const res = await axios.get("http://localhost:8800/api/comment/postManagement/" + postId);
+            const res = await axios.get("https://aplus-review-food.onrender.com/api/comment/postManagement/" + postId);
             setListComments(res.data);
         };
         if (postId) {
@@ -70,14 +70,14 @@ const InfoPostModal = ({title, visible, onCancel, onsubmit, postId}) => {
     };
     const handlePostDelete = async () => {
         try {
-            await axios.delete("http://localhost:8800/api/post/deleteAdmin/" + postId);
+            await axios.delete("https://aplus-review-food.onrender.com/api/post/deleteAdmin/" + postId);
         } catch (err) {
             console.log(err);
         }
     };
     const handleReportDelete = async () => {
         try {
-            await axios.delete("http://localhost:8800/api/report/byPostId/" + postId);
+            await axios.delete("https://aplus-review-food.onrender.com/api/report/byPostId/" + postId);
         } catch (err) {
             console.log(err);
         }

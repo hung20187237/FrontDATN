@@ -27,7 +27,7 @@ export default function SearchPage({ filter, data, socket }) {
   useEffect(() => {
     const fetchPosts = async () => {
       const res = await axios.get(
-        "http://localhost:8800/api/post/timeline/" + user._id
+        "https://aplus-review-food.onrender.com/api/post/timeline/" + user._id
       );
       setPosts(
         res.data.sort((p1, p2) => {

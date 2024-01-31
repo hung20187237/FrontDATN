@@ -40,7 +40,7 @@ export default function Topbar({socket}) {
         const getNotifications = async () => {
             try {
                 const res = await axios.get(
-                    "http://localhost:8800/api/notification/" + user._id
+                    "https://aplus-review-food.onrender.com/api/notification/" + user._id
                 );
                 setNotifications(
                     res.data.sort((p1, p2) => {
@@ -74,7 +74,7 @@ export default function Topbar({socket}) {
             const keyTextSearch = async (e) => {
                 try {
                     const res = await axios.get(
-                        `http://localhost:8800/api/user/textSearch?searchText=${textSearch}`
+                        `https://aplus-review-food.onrender.com/api/user/textSearch?searchText=${textSearch}`
                     );
                     setListSearchUser(res.data);
                 } catch (err) {
@@ -149,17 +149,17 @@ export default function Topbar({socket}) {
     ) => {
         try {
             await axios.put(
-                `http://localhost:8800/api/user/` + user._id + "/addfriend",
+                `https://aplus-review-food.onrender.com/api/user/` + user._id + "/addfriend",
                 {userId: deletefriendRequestNotification.sendUserId}
             );
-            await axios.delete(`http://localhost:8800/api/notification`, {
+            await axios.delete(`https://aplus-review-food.onrender.com/api/notification`, {
                 data: {
                     sendUserId: deletefriendRequestNotification.sendUserId,
                     receiveUserId: user._id,
                     type: 4,
                 },
             });
-            await axios.post(`http://localhost:8800/api/conversation/`, {
+            await axios.post(`https://aplus-review-food.onrender.com/api/conversation/`, {
                 firstUserId: deletefriendRequestNotification.sendUserId,
                 secondUserId: user._id,
             });
@@ -187,7 +187,7 @@ export default function Topbar({socket}) {
         deletefriendRequestNotification
     ) => {
         try {
-            await axios.delete(`http://localhost:8800/api/notification`, {
+            await axios.delete(`https://aplus-review-food.onrender.com/api/notification`, {
                 data: {
                     sendUserId: deletefriendRequestNotification.sendUserId,
                     receiveUserId: user._id,

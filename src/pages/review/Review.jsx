@@ -106,7 +106,7 @@ export default function Review({socket}) {
                 [...mutifile].map((file) => data.append("images", file));
                 try {
                     await axios
-                        .post("http://localhost:8800/api/mutiupload", data)
+                        .post("https://aplus-review-food.onrender.com/api/mutiupload", data)
                         .then((res) => res.data)
                         .then((data) =>
                             data.file.map((file) => fileName.push(file.filename))
@@ -121,8 +121,8 @@ export default function Review({socket}) {
             };
             try {
                 console.log(newRes)
-                await axios.post("http://localhost:8800/api/post", newPost);
-                await axios.post("http://localhost:8800/api/restaurant", newRes);
+                await axios.post("https://aplus-review-food.onrender.com/api/post", newPost);
+                await axios.post("https://aplus-review-food.onrender.com/api/restaurant", newRes);
                 window.location.reload();
             } catch (err) {
             }
@@ -140,7 +140,7 @@ export default function Review({socket}) {
             const formData = new FormData();
             [...imageFile].map((file) => formData.append("media", file));
             try {
-                const response = await axios.post("http://localhost:8800/api/check-image", formData)
+                const response = await axios.post("https://aplus-review-food.onrender.com/api/check-image", formData)
                 console.log(response)
                 if (response.data.data) {
                     const allActionsAccept = checkAllActionsAccept(response.data.data);
@@ -158,7 +158,7 @@ export default function Review({socket}) {
     const handleContentUpload = async (content) => {
         if (content) {
             try {
-                const response = await axios.post("http://localhost:8800/api/check-content", {content})
+                const response = await axios.post("https://aplus-review-food.onrender.com/api/check-content", {content})
                 console.log(Object.values(response.data.moderation_classes).some(value => typeof value === 'number' && value < 0.5))
                 return Object.values(response.data.moderation_classes).some(value => typeof value === 'number' && value < 0.5)
             } catch (err) {

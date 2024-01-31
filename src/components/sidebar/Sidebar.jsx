@@ -9,7 +9,7 @@ export default function Sidebar({username, socket}) {
 
   useEffect(() => {
     const fetchUsers = async () => {
-      const res = await axios.get("http://localhost:8800/api/user/all/all/all/");
+      const res = await axios.get("https://aplus-review-food.onrender.com/api/user/all/all/all/");
       setUsers( res.data);
     };
     fetchUsers();

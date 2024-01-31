@@ -16,7 +16,7 @@ export default function SearchPost({username, socket}) {
 
   useEffect(() => {
     const fetchPosts = async () => {
-      const res = await axios.get("http://localhost:8800/api/post/" + postid);
+      const res = await axios.get("https://aplus-review-food.onrender.com/api/post/" + postid);
       setPosts(res.data);
     };
     fetchPosts();

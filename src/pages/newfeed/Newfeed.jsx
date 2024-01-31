@@ -14,7 +14,7 @@ export default function Newfeed({socket, username}) {
     useEffect(() => {
         const fetchPosts = async () => {
          
-          const res = await axios.get("http://localhost:8800/api/post/timeline/" + user._id);
+          const res = await axios.get("https://aplus-review-food.onrender.com/api/post/timeline/" + user._id);
           setPosts(
             res.data.sort((p1, p2) => {
               return new Date(p2.createdAt) - new Date(p1.createdAt);

@@ -35,7 +35,7 @@ export default function CloseFriend({user, socket}) {
   const handleClickFollowOrUnfollow = async () => {
     try {
       if (followed) {
-        await axios.put(`http://localhost:8800/api/user/${user._id}/unfollow`, {
+        await axios.put(`https://aplus-review-food.onrender.com/api/user/${user._id}/unfollow`, {
           userId: currentUser._id,
         });
         dispatch({ type: "UNFOLLOW", payload: user._id });
@@ -47,7 +47,7 @@ export default function CloseFriend({user, socket}) {
           type:4
         });
       } else {
-        await axios.put(`http://localhost:8800/api/user/${user._id}/follow`, {
+        await axios.put(`https://aplus-review-food.onrender.com/api/user/${user._id}/follow`, {
           userId: currentUser._id,
         });
         dispatch({ type: "FOLLOW", payload: user._id });

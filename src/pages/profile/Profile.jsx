@@ -16,7 +16,7 @@ export default function Profile({socket}) {
 
   useEffect(() => {
     const fetchUser = async () => {
-      const res = await axios.get(`http://localhost:8800/api/user?username=${username}`);
+      const res = await axios.get(`https://aplus-review-food.onrender.com/api/user?username=${username}`);
       setUser(res.data);
     };
     fetchUser();
@@ -24,7 +24,7 @@ export default function Profile({socket}) {
 
   useEffect(() => {
     const fetchPosts = async () => {
-      const res = await axios.get("http://localhost:8800/api/post/profile/" + username)
+      const res = await axios.get("https://aplus-review-food.onrender.com/api/post/profile/" + username)
         
       setPosts(
         res.data.sort((p1, p2) => {
