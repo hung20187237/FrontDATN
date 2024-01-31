@@ -1,0 +1,40 @@
+.sidebarFriend {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+.sidebarFriendFollow{
+  display: flex;
+  font-size: 14px;
+  color: #7a7a7a;
+  align-items: center;
+  justify-content: center;
+
+} 
+.buttonFollow1{
+  display: flex;
+  margin-left: 10px;
+  border-radius: 6px;
+  background-color: #efefef;
+  transition: all .15s ease;
+  padding: 2px 10px;
+  border:0px;
+  align-items: center;
+  justify-content: center;
+
+}
+.buttonFollow1 span{
+  align-items: center;
+  justify-content: center;
+}
+.buttonFollow1:hover{
+  color: #fff;
+  background-color: #e03;
+}
+.sidebarFriendImg {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 10px;
+}

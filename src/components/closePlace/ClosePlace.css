@@ -1,0 +1,27 @@
+.rightbarPlace {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+.rightbarPlaceLocation{
+    display: flex;
+    font-size: 18px;
+    color: #7a7a7a;
+    max-width: 250px;
+}
+.rightbarPlaceName{
+    display: flex;
+    font-size: 20px;
+    font-weight: 700;
+    max-width: 250px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.rightbarPlaceImg {
+    width: 120px;
+    height: 120px;
+    border-radius: 10px;
+    object-fit: cover;
+    margin-right: 10px;
+}

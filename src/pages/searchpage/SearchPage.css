@@ -1,0 +1,119 @@
+.searchContainer{
+    display: flex;
+    width: 100%;
+    padding: 10px;
+    background: #e1e1e1;
+
+}
+.searchsidebar {
+    background: #fff;
+    flex: 2;
+    height: calc(100vh - 50px);
+    overflow-y: scroll;
+    position: sticky;
+    top: 50px;
+    
+}
+::-webkit-scrollbar {
+    width: 5px;
+}
+::-webkit-scrollbar-track {
+    background-color: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+    background-color: rgb(179, 179, 179);
+}
+  
+.searchsidebarWrapper {
+    padding: 20px;
+}
+.searchsideText span{
+    font-size: 32px;
+    margin-left: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    font-family: 'Satisfy', 'Sacramento', 'Mr De Haviland', 'Alex Brush';
+    text-align: center;
+    justify-content: center;
+}
+.searchsidebarHr {
+    margin: 20px 0;
+}
+.search-top{
+    display: flex;
+    justify-content: space-between;
+}
+.search-top > span{
+    font-size: 24px;
+    padding-left: 20px;
+    font-weight: 700;
+}
+.searchbody-top{
+    display: block;
+    box-sizing: border-box;
+}
+.searchbody-item{
+    width: 100%;
+    display: flex;
+    box-sizing: border-box;
+    margin-top: 20px;
+}
+.searchbody-item > span{
+    font-size: 20px;
+    padding-right: 20px;
+}
+.searchbody-item > span > input{
+    width: 1.5rem;
+    height: 1.5rem;
+    
+}
+.css-1ha5wk2-MuiSvgIcon-root{
+    background-color: rgb(255, 245, 245);
+    margin-right: 10px;
+}
+.css-1ha5wk2-MuiSvgIcon-root:hover{
+    background-color: rgb(252, 238, 233);
+}
+
+.searchsidebar-between{
+    padding-top: 24px;
+}
+.search-between{
+    display: flex;
+    justify-content: space-between;
+}
+.search-between > span{
+    font-size: 24px;
+    padding-left: 20px;
+    font-weight: 700;
+}
+.searchbody-between{
+    display: block;
+    box-sizing: border-box;
+}
+
+.searchsidebar-bottom{
+    padding-top: 24px;
+}
+.search-bottom{
+    display: flex;
+    justify-content: space-between;
+}
+.search-bottom > span{
+    font-size: 24px;
+    padding-left: 20px;
+    font-weight: 700;
+}
+.searchbody-bottom{
+    display: block;
+    box-sizing: border-box;
+}
+
+.bodysearchFeed{
+    margin-right: 15%;
+    margin-left: 15%;
+    padding: 10px;
+    flex:6.5
+}
+
+  

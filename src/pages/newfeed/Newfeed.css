@@ -1,0 +1,10 @@
+.newfeedContainer{
+    display: flex;
+    width: 100%;
+    background: #dfdfdf;
+}
+.bodyNewFeed{
+    margin: 0 5%;
+    padding: 10px;
+    flex:6.5
+}

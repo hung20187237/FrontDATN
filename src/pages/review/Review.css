@@ -1,0 +1,161 @@
+
+  .review {
+    width: 100%;
+  }
+  .reviewWrapper {
+    border-radius: 10px;
+    -webkit-box-shadow: 0px 0px 16px -8px rgba(0, 0, 0, 0.68);
+    box-shadow: 0px 0px 16px -8px rgba(0, 0, 0, 0.68);
+    align-items: center;
+    justify-content: center;
+    display: block;
+    padding: 10px;
+    width: 70%;
+    margin: 10px auto;
+  }
+  .bodyReview{
+    display: flex;
+  }
+  .reviewLeft,
+  .reviewRight {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .headerReview {
+    width: 100%;
+  }
+  .textContent{
+    font-family: 'Satisfy', 'Sacramento', 'Mr De Haviland', 'Alex Brush';
+    font-size: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+  .starRating{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding : 0px 4px 12px 8px;
+  }
+  
+  
+  .reviewTop {
+    display:flexbox;
+    align-items: center;
+  }
+  .reviewcomment{
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    margin-left: 10px;
+  }
+  
+  .reviewProfileImg {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 10px;
+  }
+  
+  .reviewInput:focus {
+    outline: none;
+  }
+  
+  .reviewHr {
+    margin: 20px;
+  }
+  
+  .reviewBottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .reviewOptions{
+      display: flex;
+      margin-left: 20px;
+  }
+  
+  .reviewOption{
+      display: flex;
+      align-items: center;
+      margin-right: 15px;
+      cursor: pointer;
+  }
+  
+  .reviewIcon{
+      font-size: 18px;
+      margin-right: 3px;
+  }
+  
+  .reviewOptionText{
+      font-size: 14px;
+      font-weight: 500;
+  }
+  
+  .reviewButton{
+      border: none;
+      padding: 7px;
+      border-radius: 5px;
+      background-color: rgb(194, 31, 169);
+      font-weight: 500;
+      margin-right: 20px;
+      cursor: pointer;
+      color: white;
+  }
+  
+  .reviewImgContainer{
+    margin: 0 7%;
+    padding: 0 20px 10px 20px;
+    position: relative;
+    flex-wrap: wrap;
+  }
+  
+  .reviewCancelImg{
+    position: absolute;
+    top: 0;
+    right: 20px;
+    cursor: pointer;
+    opacity: 0.7;
+  }
+  .reviewBox{
+    height: 300px;
+    padding: 10px;
+    background-color: white;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.reviewInput{
+    border-radius: 10px;
+    border: 1px solid gray;
+    font-size: 18px;
+    width: 80%;
+    margin: 0 auto 24px auto;
+}
+
+.reviewInput:focus{
+    outline: none;
+}
+
+.reviewSubmitButton{
+  width: 60%;
+  align-self: center;
+  height: 50px;
+  border-radius: 10px;
+  border: none;
+  background-color: rgb(194, 31, 169);
+  color: white;
+  font-size: 20px;
+  font-weight: 500;
+  cursor: pointer;
+}
+.tox .tox-notification{
+  display: none !important;
+}

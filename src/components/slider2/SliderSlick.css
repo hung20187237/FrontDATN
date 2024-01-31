@@ -1,0 +1,71 @@
+@import "~slick-carousel/slick/slick.css";
+@import "~slick-carousel/slick/slick-theme.css";
+
+.sliderslick {
+  width: 100%;
+  max-width: 1100px;
+  margin: 2rem auto;
+  height: 500px;
+  text-align: center;
+  justify-content: center;
+}
+.sidebarHr {
+  margin: 20px 0;
+}
+
+.titleslider{
+  font-size: 32px;
+  font-weight: 700;
+  font-family: 'Satisfy', 'Sacramento', 'Mr De Haviland', 'Alex Brush';
+}
+.slideslick div{
+  font-size: 32px;
+  font-weight: 700;
+  color: rgb(255, 255, 255);
+  z-index: 10;
+  top:75%;
+  right: 5px;
+  position: absolute;
+  font-family: 'Satisfy', 'Sacramento', 'Mr De Haviland', 'Alex Brush';
+}
+.slideslick img {
+  width: 400px;
+  height: 400px;
+  margin: 0 auto;
+}
+
+.slideslick {
+  transform: scale(0.5);
+  transition: transform 300ms;
+  opacity: 0.5;
+}
+
+.activeSlideSlick {
+  transform: scale(1.1);
+  opacity: 1;
+}
+
+.arrow {
+  background-color: #fff;
+  position: absolute;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.arrow svg {
+  transition: color 300ms;
+}
+
+.arrow svg:hover {
+  color: #68edff;
+}
+
+.next {
+  right: 0%;
+  top: 50%;
+}
+
+.prev {
+  left: 0%;
+  top: 50%;
+}

@@ -1,0 +1,30 @@
+.newfeedContainer {
+    display: flex;
+    width: 100%;
+}
+
+.bodyNewFeedRes {
+    margin: 0 5%;
+    max-width: calc(100vw - 655px - 10%);
+    padding: 10px;
+    flex: 1;
+}
+
+.Place_resTop__1xCCM {
+    padding: 8px;
+    margin-bottom: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    position: relative;
+}
+
+.Place_resTop__1xCCM .Place_address__2xVBb {
+    font-size: 16px;
+    padding-left: 8px;
+}
+
+.Place_resTop__1xCCM .Place_intro__2uQsk {
+    margin-bottom: 4px;
+    margin-right: 40px;
+}

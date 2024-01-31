@@ -1,0 +1,214 @@
+.topbarContainer {
+    height: 50px;
+    width: 100%;
+    background-color: rgb(231, 97, 63);
+    display: flex;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+  }
+  
+  .topbarLeft {
+    flex: 3;
+    display: flex;
+  }
+  
+  .logo {
+    font-size: 24px;
+    margin-left: 20px;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    font-family: 'Satisfy', 'Sacramento', 'Mr De Haviland', 'Alex Brush';
+  }
+  
+  .topbarCenter {
+    flex: 5.5;
+  }
+  
+  .searchbar {
+    width: 100%;
+    height: 30px;
+    background-color: white;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .searchIcon {
+    font-size: 20px !important;
+    margin-left: 10px;
+  }
+  
+  .searchInput {
+    border: none;
+    width: 50%;
+  }
+  
+  .searchInput:focus {
+    outline: none;
+  }
+  
+  .topbarRight {
+    flex: 3.5;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    color: white;
+  }
+  .writeReview{
+    background-color: rgb(238, 128, 95);
+    height: 32px;
+    width: 128px;
+    margin-right: 10px;
+    padding:0 8px;
+    border-radius: 20px;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    
+  }
+  .khampha{
+    background-color: rgb(238, 128, 95);
+    height: 32px;
+    width: 128px;
+    margin-left: 20px;
+    padding:0 8px;
+    border-radius: 20px;
+    display: flex;
+    text-align: center;
+    align-items: center;
+  }
+  .writeReview:hover{
+    background-color: rgb(250, 71, 0);
+  }
+  .textReview{
+    font-size: 18px;
+    font-family: 'Satisfy', 'Sacramento', 'Mr De Haviland', 'Alex Brush';
+  }
+  .iconReview{
+    padding-top: 9px;
+  }
+  
+  .topbarIconItem {
+    margin-right: 15px;
+    cursor: pointer;
+    position: relative;
+  }
+  
+  .topbarIconBadge {
+    width: 15px;
+    height: 15px;
+    background-color: red;
+    border-radius: 50%;
+    color: white;
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+  }
+  
+  .topbarImg {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+    cursor: pointer;
+  }
+
+ .topbarRightLogout{
+     cursor: pointer;
+     padding-right: 10px;
+     padding-left: 20px;
+     font-size: 22px;
+ }
+
+ .topbarRightFriendRequestAlert{
+   display: flex;
+   align-items: center;
+   justify-content: left;
+ }
+
+ .topbarRightFriendRequestAlertIconBadge{
+  width: 15px;
+  height: 15px;
+  background-color: red;
+  border-radius: 50%;
+  color: white;
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+ }
+
+ .topbarRightFriendRequestAlert{
+  margin-right: 15px;
+  cursor: pointer;
+  position: relative;
+ }
+
+ .friendRequestAlert{
+  width: 30%;
+  height: 500px;
+  position: fixed;
+  top: 30px;
+  right: 200px;
+  z-index: 1;
+  background-color: rgb(236, 219, 219);
+  border-radius: 10px;
+}
+
+.topbarRightNotificationAlert{
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  margin-right: 20px;
+}
+
+.topbarRightNotificationAlertIconBadge{
+  width: 15px;
+  height: 15px;
+  background-color: red;
+  border-radius: 50%;
+  color: white;
+  position: relative;
+  top: -8px;
+  left: -8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+}
+.notificationDate{
+  font-size: 12px;
+  color: black;
+}
+.notificationAlert{
+  width: 30%;
+  height: 500px;
+  position: fixed;
+  padding: 10px;
+  top: 8px;
+  right: 200px;
+  z-index: 1;
+  background-color: rgb(240, 193, 128);
+  overflow-y: scroll;
+  box-shadow: 5px 5px rgba(0,0,0,.2);
+}
+
+.notificationAlertItem{
+  background-color: white;
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+.notificationAlertItemDesc{
+  color: gray;
+}

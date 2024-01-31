@@ -1,0 +1,45 @@
+.bodyCatology{
+    width: 100%;
+    max-width: 1100px;
+    margin: 2rem auto;
+    height: 400px;
+    text-align: center;
+    justify-content: center;
+}
+.bodycardCatology{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    
+}
+.sidebarHr {
+    margin: 20px 0;
+}
+.titleslider{
+    font-size: 32px;
+    font-weight: 700;
+    font-family: 'Satisfy', 'Sacramento', 'Mr De Haviland', 'Alex Brush';
+}
+.cardCatology {
+    border: 1px solid #fff;
+    border-radius: 16px;
+    overflow: hidden;
+    height: 400px;
+    width: 30%;
+    color: #fff;
+    margin-bottom: 20px;
+    background-color: bisque;
+}
+.cardCatology > span{
+    font-size: 28px;
+    font-weight: 700;
+    color: rgb(0, 0, 0);
+    font-family: 'Satisfy', 'Sacramento', 'Mr De Haviland', 'Alex Brush';
+
+}
+.cardCatology > img{
+    width: 100%;
+    height: 340px;
+    object-fit: cover;
+    border-radius: 8px;
+}

@@ -1,0 +1,8 @@
+.newfeedContainer{
+    display: flex;
+    width: 100%;
+}
+.bodyNewFeed{
+    padding: 10px;
+    flex:6.5
+}
