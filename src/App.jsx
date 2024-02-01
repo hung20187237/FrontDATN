@@ -23,10 +23,9 @@ function App() {
   const { user } = useContext(Context);
 
   useEffect(() => {
-    socket.current = io("https://aplus-review-food.onrender.com", {
-      withCredentials: true,
-    });
+    socket.current = io("https://aplus-review-food.onrender.com:8900");
     socket.current.emit("addUser", user?._id);
+    // socket.current.emit("connection123")
   }, []);
 
   return (
